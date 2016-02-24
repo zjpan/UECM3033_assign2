@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="generator" content="ReText 5.2.1">
+<title>README</title>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  config: ["MMLorHTML.js"],
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+  jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
+  extensions: ["MathMenu.js", "MathZoom.js"],
+  TeX: {
+    equationNumbers: {autoNumber: "AMS"}
+  }
+});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js"></script></head>
+<body>
+<h1>UECM3033 Numerical Methods (Assignment #2)</h1>
+<hr>
+<p>DEADLINES:</p>
+<ul>
+<li>This assignment will contribute to 5 marks of the coursework.</li>
+<li>Assignment submission: 29/1/2016 (Friday) by 12:00 noon.</li>
+<li>Peer Reviews: 5/2/2016 (Friday) by 12:00 noon.</li>
+</ul>
+<p><strong>All deadlines are final and no extensions are allowed.</strong> Delay in submission of the assigments will delays the peer review process. Thus a penalty of 1 mark per day will be imposed for one day late in submission of assignment. Each student will need to review two peers. No mark will be awarded if a student failed to review the two peers.</p>
+<p>You could always edit and change your submission as many time as you like. However, you are not suppose to change your submission when the peer reviews starts. Your reviewers will be asked to check the last modified dates of your files. If the dates is beyond the stipulated due dates, you will be considered as late submission and same penalty will be applied.</p>
+<hr>
+<p>There are a total of 2 tasks for this assignments:</p>
+<ul>
+<li>Implement conjugate gradient methods to solve a linear system</li>
+<li>Application of SVD in image compression</li>
+</ul>
+<hr>
+<h2>Task 1 -- Conjugate gradient method</h2>
+<p>In this task, you will write a <code>Python</code> code to implement the conjugate gradient method to solve systems of linear equations. Later, your implementation of the conjugate gradient will be subjected to an automated computer assessment script. The number of linear systems that it passes will give you the score for this part of the assignment.</p>
+<h5>1. Clone the repository</h5>
+<pre><code>$ git clone https://github.com/your_github_id/UECM3033_assign2
+</code></pre>
+
+<p>This will create a <em><code>UECM3033_assign2</code></em> folder. In your <em><code>UECM3033_assign2</code></em> folder, there will be <code>task1.py</code> file.</p>
+<h5>2. Edit <code>task1.py</code>.</h5>
+<p>Replace the commented block in the <code>conjgrad</code> function with your implementation of conjugate gradient method. </p>
+<p>Note: <strong>DO NOT</strong> change the <code>def</code> line and the <code>return</code> line in <code>task1.py</code>, also <strong>DO NOT</strong> change the name of <code>task1.py</code>. Changing these will caused the computer assessment script fail to run and hence your implementation considered as failed the automated tests.</p>
+<h5>3. Report write up</h5>
+<p>Write a short description on how you implement the conjugate gradient method. You can use the given template in markdown language <code>report.md</code>, or create your own doc report.</p>
+<h5>4. Commit changes and push your completed <code>task1.py</code> and report to Github.</h5>
+<h5>5. Review submissions from your peers.</h5>
+<p>Run the <code>test_task1.py</code> and evaluate the code in <code>task1.py</code>. Fill in the google form. </p>
+<hr>
+<h2>Task 2 -- SVD method and image compression</h2>
+<p>One of most useful results from linear algebra is the singular value decomposition SVD. In this task, we will be demonstrating the application of SVD in image compression.</p>
+<p>(As Github markdown doesn't render equations well, you can see the <a href="README.html"><code>README.html</code></a>)</p>
+<p>We will briefly discuss SVD here. We already know that a square matrix <em>A</em> is <em>diagonalisable</em> if we can write it as </p>
+<p>
+<script type="math/tex; mode=display">{A} = {PDP}^{-1}.</script>
+</p>
+<p>Here </p>
+<p>
+<script type="math/tex; mode=display">\begin{align*}
+D =  \left[ \begin{array}{ccc}
+    \lambda_1 & 0 & \dots & 0\\
+    0 & \lambda_2 &  \dots & 0 \\
+    \vdots & \dots & \ddots & \vdots\\
+    0 & 0 & \dots & \lambda_n
+    \end{array} \right],
+\end{align*}</script>
+</p>
+<p>and <script type="math/tex; mode=display">P = [v_1, v_2, \dots, v_n],</script>
+</p>
+<p>where $v_i$  and  are the eigenvalues and eigenvectors. Singular value decomposition is essentially generalize this diagonalisation to non-square matrix.</p>
+<p>For any matrix is symmetric. Symmetric matrix has a nice property of its eigenvectors form an orthonormal basis.</p>
+<hr>
+<h2>Summary:</h2>
+<h3>Task 1:</h3>
+<ul>
+<li>clone UECM3033_assign1 repository</li>
+<li>pull repository</li>
+<li>submit screen shot "python.png" to Github</li>
+</ul>
+<h3>Task 2:</h3>
+<ul>
+<li>Edit and modify <code>pyexercise.py</code></li>
+<li>Edit and modify <code>report.md</code></li>
+<li>Submit <code>pyexercise.py</code> and <code>report.md</code> to Github.</li>
+</ul>
+<hr>
+<p><sup>last modified: 22 Dec 2015</sup></p>
+</body>
+</html>

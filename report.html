@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="generator" content="Madoko, version 1.0.0-rc5" />
+  <meta name="viewport" content="initial-scale=1.0" />
+  <style type="text/css"  class="link">
+  /*# sourceURL=madoko.css */
+  
+  .madoko .toc>.tocblock .tocblock .tocblock {
+    margin-left: 2.25em;
+  }
+  .madoko .toc>.tocblock .tocblock {
+    margin-left: 1.5em;
+  }
+  .madoko .toc-contents>.tocblock>.tocitem {
+    font-weight: bold;
+  }
+  .madoko .toc {
+    margin-top: 1em;
+  }
+  .madoko p.para-continue {
+    margin-bottom: 0pt;
+  }
+  .madoko .para-block+p {
+    margin-top: 0pt;
+  }
+  .madoko ul.para-block, .madoko ol.para-block {
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+  }
+  .madoko ul.para-end, .madoko ol.para-end {
+    margin-bottom: 1em;
+  }
+  .madoko dl {
+    margin-left: 0em;
+  }
+  .madoko blockquote {
+    font-style: italic;
+  }
+  .madoko a.localref {
+    text-decoration: none;
+  }
+  .madoko a.localref:hover {
+    text-decoration: underline;
+  }
+  .madoko .footnotes {
+    font-size: smaller;
+    margin-top: 2em;
+  }
+  .madoko .footnotes hr {
+    width: 50%;
+    text-align: left;
+  }
+  .madoko .footnote { 
+    margin-left: 1em;
+  }
+  .madoko .footnote-before {
+    margin-left: -1em;
+    width: 1em;
+    display: inline-block;
+  }
+  .madoko .align-center, .madoko .align-center>p {
+    text-align: center !important;
+  }
+  .madoko .align-center pre {
+    text-align: left;
+  }
+  .madoko .align-center>* {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .madoko .align-left, .madoko .align-left>p {
+    text-align: left !important;
+  }
+  .madoko .align-left>* {
+    margin-left: 0pt !important;
+    margin-right: auto !important;
+  }
+  .madoko .align-right, .madoko .align-right>p {
+    text-align: right !important;
+  }
+  .madoko .align-right>* {
+    margin-left: auto !important;
+    margin-right: 0pt !important;
+  }
+  .madoko .align-center>table,
+  .madoko .align-left>table,
+  .madoko .align-right>table {
+    text-align: left !important;
+  }
+  .madoko .equation-before {
+    float: right;
+  }
+  .madoko .bibitem {
+    font-size: smaller;
+  }
+  .madoko .bibsearch {
+    font-size: x-small;
+    text-decoration:none;
+    color: black;
+    font-family: "Segoe UI Symbol", Symbola, serif;
+  }
+  .madoko .block, .madoko .figure, .madoko .bibitem, .madoko .equation, .madoko div.math {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+  }
+  .madoko .figure {
+    padding: 0.5em;
+    margin-left: 0pt;
+    margin-right: 0pt;
+  }
+  .madoko .hidden {
+    display: none;
+  }
+  .madoko .invisible {
+    visibility: hidden;
+  }
+  .madoko.preview .invisible {
+    visibility: visible;
+    opacity: 0.5;
+  }
+  .madoko code.code, .madoko span.code {
+    white-space: pre-wrap;
+  }
+  .madoko hr, hr.madoko {
+    border: none;
+    border-bottom: black solid 1px;
+    margin-bottom: 0.5ex;
+  }
+  .madoko .framed>*:first-child {
+    margin-top: 0pt;
+  }
+  .madoko .framed>*:last-child {
+    margin-bottom: 0pt;
+  }
+  .madoko ul.list-style-type-dash {
+      list-style-type: none !important;
+  }
+  .madoko ul.list-style-type-dash > li:before {
+      content: "\2013"; 
+      position: absolute;
+      margin-left: -1em; 
+  }
+  .madoko table.madoko {
+    border-collapse: collapse;
+  }
+  .madoko td, .madoko th {
+    padding: 0ex 0.5ex;
+    margin: 0pt;
+    vertical-align: top;
+  }
+  .madoko .cell-border-left {
+    border-left: 1px solid black;
+  }
+  .madoko .cell-border-right {
+    border-right: 1px solid black;
+  }
+  .madoko thead>tr:first-child>.cell-line,
+  .madoko tbody:first-child>tr:first-child>.cell-line {
+    border-top: 1px solid black;
+    border-bottom: none;
+  }
+  .madoko .cell-line, .madoko .cell-double-line {
+    border-bottom: 1px solid black;
+    border-top: none;
+  }
+  .madoko .cell-double-line {
+    border-top: 1px solid black;
+    padding-top: 1.5px !important;
+  }
+  .madoko .input-mathpre .MathJax_Display {
+    text-align: left !important;
+  }
+  .madoko div.input-mathpre {
+    text-align: left;
+    margin-top: 1.5ex;
+    margin-bottom: 1ex;
+  }
+  .madoko .math-rendering {
+    color: gray;
+  }
+  .madoko .mathdisplay {
+    text-align: center;
+  }
+  .madoko .pretty table {
+    border-collapse: collapse;
+  }
+  .madoko .pretty td {
+    padding: 0em;
+  }
+  .madoko .pretty td.empty {
+    min-width: 1.5ex;
+  }
+  .madoko .pretty td.expander {
+    width: 100em;
+  }
+  body.madoko, .madoko .serif {
+    font-family: Cambria,"Times New Roman","Liberation Serif","Times",serif;
+  }
+  .madoko .sans-serif {
+    font-family: "Calibri", "Optima", sans-serif;
+  }
+  .madoko .symbol {
+    font-family: "Segoe UI Symbol", Symbola, serif;
+  }
+  body.madoko {  
+    -webkit-text-size-adjust: 100%;       
+    text-rendering: optimizeLegibility;
+  }
+  body.madoko {
+    max-width: 88ex; 
+    margin: 1em auto;
+    padding: 0em 2em;  
+  }
+  body.preview.madoko {
+    padding: 0em 1em;
+  }
+  .madoko p {
+    text-align: justify;
+  }
+  .madoko h1, .madoko h2, .madoko h3, .madoko h4 { 
+    margin-top: 1.22em; 
+    margin-bottom: 1ex;
+  }
+  .madoko h1+p, .madoko h2+p, .madoko h3+p, .madoko h4+p, .madoko h5+p  { 
+    margin-top: 1ex;    
+  }
+  .madoko h5, .madoko h6 { 
+    margin-top: 1ex;
+    font-size: 1em;
+  }
+  .madoko h5 { 
+    margin-bottom: 0.5ex;
+  }
+  .madoko h5 + p {
+    margin-top: 0.5ex;
+  }
+  .madoko h6 { 
+    margin-bottom: 0pt;
+  }
+  .madoko h6 + p {
+    margin-top: 0pt;
+  }
+  .madoko pre, .madoko code, .madoko kbd, .madoko samp, .madoko tt, 
+  .madoko .monospace, .madoko .token-indent, .madoko .reveal pre, .madoko .reveal code, .madoko .email {
+    font-family: Consolas,"Andale Mono WT","Andale Mono",Lucida Console,Monaco,monospace,monospace;
+    font-size: 0.85em;
+  }
+  .madoko pre code, .madoko .token-indent {
+    font-size: 0.95em;
+  }
+  .madoko pre code {
+    font-family: inherit !important;
+  }
+  .madoko ol.linenums li {
+    background-color: white;
+    list-style-type: decimal;
+  }
+  .madoko .remote {
+    background-color: #F0FFF0;
+  }
+  .madoko .remote + * {
+    margin-top: 0pt;
+  }
+  @media print {
+    body.madoko {
+      font-size: 10pt;
+    }
+    @page {
+      margin: 1in 1.5in;
+    }
+  }
+  @media only screen and (max-device-width:1024px) {
+    body.madoko {
+      padding: 0em 0.5em;    
+    }
+    .madoko li {
+      text-align: left;
+    }
+  }
+  
+    </style>
+  
+  </head>
+<body class="madoko">
+
+<div class="body madoko" style="line-adjust:0"><h2 id="sec-uecm3033-assignment-2-report" class="h1" data-line="1" data-heading-depth="1" style="display:block"><span data-line="1"></span><span class="heading-before"><span class="heading-label">1</span>.&#8194;</span><span data-line="1"></span>UECM3033 Assignment <span data-line="1"></span>#<span data-line="1"></span>2 Report</h2>
+<ul class="ul list-dash compact" data-line="4">
+<li class="li ul-li list-dash-li compact-li" data-line="4"><span data-line="4"></span>Prepared by: <span data-line="4"></span><strong class="strong-star2"> Put your name here</strong><span data-line="4"></span>
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="5"><span data-line="5"></span>Tutorial Group: T2/T3
+</li></ul>
+
+<hr  class="madoko" data-line="7" style="display:block">
+<h3 id="sec-task-1----lu-factorization-or-sor-method" class="h2" data-line="9" data-heading-depth="2" style="display:block"><span data-line="9"></span><span class="heading-before"><span class="heading-label">1.1</span>.&#8194;</span><span data-line="9"></span>Task 1<span data-line="9"></span> <span data-line="9"></span>&#8211;<span data-line="9"></span>  <span data-line="9"></span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAAcCAYAAADfjMc9AAAACXBIWXMAAA7EAAAOxAGVKw4bAAACLklEQVRYw9VY7W3CMBB9Z3WAqCNkhLQjhA1C2SDdgB3oBnSDFjYgG1DYIIwAbHD90aOyrMTxV1JqyVKIuae7e35n58DM6JsAlgDYc9Y2zAjssgcnd/WLxKB3EFEhjzmAjbH8DmAH4ArgDODKzCc4DCLKADwDyAR71YF90HAbC1YpGK8ACm1pC2AP4ASggQsLWhYvWqZ2PrZTYQNoBaMw1xQcBxHlwsJtbJBojID9xsxH86XyACiN3w3SDRP7MzBpN0l8dK37BDvTnp21GYB9YuZrTNK6WI1hNiWrKbFnNnsVqKldQr0WCbFLm726Q702kXptYoP9L3q99uk1lNkx9bqNwFkM+abuQK+YQq+uzE6mV9uV0JGQJjbYMfW60J6PkUkb9E39sV6LRNhzl1uX+kO9llPq1YXZMfU6S6TXwtU3NbZeiSgnompEeZSu57OaQK8rudnY9BqzhRfO57PlIzgPabcYGJnYZj3vrS0XB/y870O9a6qR9VoDaDq2mMn0V8SuOdquiK7MbrTMXyJaLZWFcf5xIQi78GGVmeHaE1oHOLOyBWLg5wHyaH39ctVr5elMKXYby3/WIfgS6AHAwZuAHsDaCDYLCNRaeIyt3HoUpFaCzVIFu/PVqzi/9rEzErMewF4O7Zah+aDdQh4FdGZU4nPH1U6vqpmcdUVHk3uoODZE9CTFsCaiF7HbS+M9F38qaXTPmTnmm/e3qqWcl4CiU0nQeuFqZbeUKRrx3xulTaYzuClpAAAAAElFTkSuQmCC" alt="$LU$" class="math-inline math-render-png math" style="height:0.7285em"><span data-line="9"></span> Factorization or SOR method</h3>
+<p class="p noindent" data-line="11"><span data-line="11"></span>The reports, codes and supporting documents are to be uploaded to Github at: 
+</p>
+<p class="p indent" data-line="13"><span data-line="13"></span><a href="https://github.com/your_github_id/UECM3033_assign1">https://github.com/your_github_id/UECM3033_assign1</a><span data-line="13"></span>
+</p>
+<p class="p indent" data-line="15"><span data-line="15"></span>Explain your selection criteria here.
+</p>
+<p class="p indent" data-line="17"><span data-line="17"></span>Explain how you implement your <span data-line="17"></span><code class="code code1">task1.py</code><span data-line="17"></span> here.
+</p>
+<hr  class="madoko" data-line="19" style="display:block">
+<h3 id="sec-task-2----svd-method-and-image-compression" class="h2" data-line="21" data-heading-depth="2" style="display:block"><span data-line="21"></span><span class="heading-before"><span class="heading-label">1.2</span>.&#8194;</span><span data-line="21"></span>Task 2<span data-line="21"></span> <span data-line="21"></span>&#8211;<span data-line="21"></span> SVD method and image compression</h3>
+<p class="p noindent" data-line="23"><span data-line="23"></span>Put here your picture file (Lenna.png)
+</p>
+<p class="p indent" data-line="25"><span data-line="25"></span><img src="Lenna.png" alt="Lenna.png" data-path="Lenna.png"><span data-line="25"></span>
+</p>
+<p class="p indent" data-line="27"><span data-line="27"></span>How many non zero element in <span data-line="27"></span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAdCAYAAAC0T3x2AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABbUlEQVRIx72W/U3DMBDFf1dlACtsYDYII1A2CGKDskGYoSN0ho4Q2ICOkK7QbnD8gY0sY/Jhp1iyosgXv/PL870TVeW/xgHQG85OVamAI7CLwN+A9xlJ1oAFDHAHNMA2irkHwFG3j7IYVJWc6UBDlnpVJQwYIrBDLpjbrwuTDheaBL/bQrDTN2kBUJSFnxfAFAC1bh/zZxYxxwVgCjSpBZugcFdIX7uJ9aqqZ+A1vmsiYjPv6SdgxzLpo1OdCuRupgIuEdg+m8KZqglnszqQAzusUTXm8lxcNTYzlfMcvQ+LtbdAPZ7C4y2ps06B2VVCphxWRIy73VdVfch112pGzId7PuYAiEgL1JuJoKOj7UlVr5mHeRkVQ/Dzm8LqPQDtlDuWGp8ds4m21BqCvfZJ43MdzE+LVAhifCWJewa7RlMS7DX8ak4CSyi17SbRuvW+gfR2a4BaRPoF0q39d+6ZGmeASkQ6d1Sf0dpjAPgCPB/l95hbps0AAAAASUVORK5CYII=" alt="$\Sigma$" class="math-inline math-render-png math" style="height:0.7545em"><span data-line="27"></span>?
+</p>
+<p class="p indent" data-line="29"><span data-line="29"></span>Put here your lower and better resolution pictures. Explain how you generate
+these pictures from <span data-line="30"></span><code class="code code1">task2.py</code><span data-line="30"></span>.
+</p>
+<p class="p indent" data-line="32"><span data-line="32"></span>What is a sparse matrix?
+</p>
+<hr  class="madoko" data-line="35" style="display:block">
+
+<p class="p noindent" data-line="37"><span data-line="37"></span><sup><span data-line="37"></span>last modified: change your date here<span data-line="37"></span></sup><span data-line="37"></span>
+</p><span data-line=""></span></div>
+</body>
+
+</html>
