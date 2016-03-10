@@ -57,7 +57,7 @@ Put here your picture file (Reset.png)
 
 **How many non zero element in $\Sigma$?**
 
-There is N non zero element in $\Sigma$ . In our case, there are 800 non zero element in $\Sigma$ .
+There is N non zero element in $\Sigma$ . In this assignment, there are 800 non zero element in $\Sigma$ .
 
 **Put here your lower and better resolution pictures. Explain how you generate these pictures from `task2.py`.**
 
@@ -69,14 +69,12 @@ Better resolution picture. (Reset_higher.jpg)
 
 ![Reset_better.jpg](Reset_better.jpg)
 
-First, calculate a new $\Sigma_n$ with $n$ number of eigenvector used, 30 for lower resolution and 200 for better resolution. Both picture is then obtain by compute the matrix by U $\Sigma_n$ V for each color layer, then merge togehter to become an image in RGB format.
-
 First, I get the RGB value from the image file. Then I use sci.linalg.svd to decompose the R,G and B matrices into $\Sigma$, U and V. The $\Sigma$ I got is a vector with dimension of (800,1). I modified it into a diagonal matrix with dimension of (800,1000). 
 
-For Lower Resolution Picture
+For Lower Resolution Picture- 
 The first 30 diagonal elements are kept while the other none zero elements are set to zero.
 
-For Better Resolution Picture
+For Better Resolution Picture- 
 The first 200 diagonal elements are kept while the other none zero elements are set to zero.
 
 Lastly, I combine $\Sigma$, U and V into R, G and B matrices again. The new RGB values are use to generate the lower resolution image and better resolution image.
