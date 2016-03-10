@@ -53,7 +53,7 @@ for second set of 6-variables system of linear equations are \begin{align} x_1=1
 
 Put here your picture file (Reset.png)
 
-![Reset.jpg](/Users/panzjoon/UECM3033_assign2/Reset.jpg)
+![Reset.jpg](Reset.jpg)
 
 How many non zero element in $\Sigma$?
 
