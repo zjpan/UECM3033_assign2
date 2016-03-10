@@ -55,14 +55,36 @@ Put here your picture file (Reset.png)
 
 ![Reset.jpg](Reset.jpg)
 
-How many non zero element in $\Sigma$?
+**How many non zero element in $\Sigma$?**
 
-Put here your lower and better resolution pictures. Explain how you generate
-these pictures from `task2.py`.
+There is N non zero element in $\Sigma$ . In our case, there are 800 non zero element in $\Sigma$ .
+
+**Put here your lower and better resolution pictures. Explain how you generate these pictures from `task2.py`.**
+
+Lower resolution picture. (Reset_lower.jpg)
+
+![Reset_lower.jpg](Reset_lower.jpg)
+
+Better resolution picture. (Reset_higher.jpg)
+
+![Reset_better.jpg](Reset_better.jpg)
+
+First, calculate a new $\Sigma_n$ with $n$ number of eigenvector used, 30 for lower resolution and 200 for better resolution. Both picture is then obtain by compute the matrix by U $\Sigma_n$ V for each color layer, then merge togehter to become an image in RGB format.
+
+First, I get the RGB value from the image file. Then I use sci.linalg.svd to decompose the R,G and B matrices into $\Sigma$, U and V. The $\Sigma$ I got is a vector with dimension of (800,1). I modified it into a diagonal matrix with dimension of (800,1000). 
+
+For Lower Resolution Picture
+The first 30 diagonal elements are kept while the other none zero elements are set to zero.
+
+For Better Resolution Picture
+The first 200 diagonal elements are kept while the other none zero elements are set to zero.
+
+Lastly, I combine $\Sigma$, U and V into R, G and B matrices again. The new RGB values are use to generate the lower resolution image and better resolution image.
 
 What is a sparse matrix?
 
+A sparse matrix is a matrix in which most of the elements are zero. In this assignment, we convert the vector $\Sigma$ to a diagonal matrix. We change the dimension of $\Sigma$ from [800,1] to [800,1000] which create a sparse matrix. There are 800 non zero element and 799200 zero element in our $\Sigma$.
 
 -----------------------------------
 
-<sup>last modified: change your date here</sup>
+<sup>last modified: 11 March 2016</sup>
